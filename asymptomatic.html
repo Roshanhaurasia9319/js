@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+</body>
+<script>
+    // console.log("First");
+    // console.log("second");
+    // setTimeout(() => {
+    //     console.log("first time out");
+    // }, 1000);
+    // console.log("third");
+     function first(sum){
+       console.log(sum);
+     }
+     function values(num1,num2,calc){ //callback function
+        let sum = num1 + num2;
+        calc(sum);
+     }
+     values(5,5,first);
+
+     
+</script>
+</html>

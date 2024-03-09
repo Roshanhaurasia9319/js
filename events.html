@@ -1,0 +1,47 @@
+<!-- syntax of event listner:
+element.addEventListener(event, function, useCapture); -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    button p{
+        display: none;
+    }
+</style>
+<body>
+    <div class="box">
+        <button type="button" id="mybtn">Submit</button>
+        <button type="text" id="drag">
+             <p>
+                gcgvhbjbjjhcccccccccccccccccccccccccccccccccccccccc
+             </p>
+        </button>
+    </div>
+</body>
+
+<script>
+// let button = document.getElementById("mybtn");
+// button.addEventListener("click", ()=>{
+//    document.querySelector(".box").innerHTML = "<b>yay you are clicked</b>"
+// })
+
+
+document.getElementById("mybtn").addEventListener("click",show);
+function show(){
+    alert("hellow");
+}
+
+let x=document.getElementById("drag").addEventListener("mouseover",showme);
+function showme(){
+         x.style.display = "inline";
+}
+
+
+</script>
+
+</html>

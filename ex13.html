@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excersize 13 creating dynamic web pages</title>
+</head>
+
+<style>
+    .container{
+        border: 2px solid black;
+        height: 30vh;
+        width: 70vw;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+    }
+    .container .card{
+        background: url(bg.webp);
+    background-position: center center;
+    background-size: 17vw 40vh;
+    background-repeat: no-repeat;
+    border: 2px solid black;
+    height: 30vh;
+    width: 29vw;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    }
+    .time{
+        border: 2px solid black;
+        height: 2vh;
+        width: 2vw;
+        margin: 5px;
+    }
+    h1,p{
+       display: inline-block;
+      margin: 10px;
+       
+    }
+</style>
+<script>
+    function createCard(title,cname,views,monthSOLD,duration,thumbnail){
+        let viewstr
+    if(views < 1000000){
+        let viewstr=views/1000 + 'k';
+    }
+    else if(views > 1000000){
+        viewstr = views/1000000 + 'M';
+    }
+    else{
+        viewstr =views/1000 + 'k';
+    }
+
+    // let html ='<div clss="card">
+    //     <div class="card'
+}
+</script>
+<body>
+    <div class="container">
+        <div class="card">
+             <div class="time"></div>
+        </div>
+        <div class="para">
+            <h1>${title}</h1>
+            <p>${cname} . ${viewstr} views . 2 Months ago</p>
+        </div>
+        <div class="box">
+            <div class="b1"></div>
+            <div class="b2"></div>
+            <div class="b3"></div>
+        </div>
+    </div>
+</body>
+
+
+<script>
+    
+</script>
+
+
+</html>

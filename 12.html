@@ -1,0 +1,107 @@
+<!-- random color and background-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random color and background</title>
+</head>
+
+<style>
+  
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+  .box{
+    border: 2px solid black;
+    height: 70px;
+    width: 70px;
+    background-color: rgb(255, 0, 0);
+  }
+
+
+
+</style>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+
+<script>
+    
+    
+
+
+
+
+//     function randomColor() {
+//     //  num=random("green","yellow","blue","red","purple");
+    
+//     for(let i=0;i<4;i++){
+//         let num=Math.floor(Math.random()*10);
+//         let k=Math.floor(Math.random()*5);;
+//     switch(num){
+//         case 0:
+//               document.querySelector(".container").children[k].style.backgroundColor = "green"; break;
+//         case 1:
+//               document.querySelector(".container").children[k].style.backgroundColor = "red";  break;
+//         case 2:
+//               document.querySelector(".container").children[k].style.backgroundColor = "blue";  break;
+//         case 3:
+//               document.querySelector(".container").children[k].style.backgroundColor = "yellow";  break;
+//         case 4:
+//               document.querySelector(".container").children[k].style.backgroundColor = "purple";  break;
+//         case 5:
+//               document.querySelector(".container").children[k].style.backgroundColor = "pink";  break;
+//         case 6:
+//               document.querySelector(".container").children[k].style.backgroundColor = "skyblue";  break;
+//         case 7:
+//               document.querySelector(".container").children[k].style.backgroundColor = "orange";  break;
+//         case 8:
+//               document.querySelector(".container").children[k].style.backgroundColor = "magenta";  break;
+//         case 9:
+//               document.querySelector(".container").children[k].style.backgroundColor = "black";  break;
+//         case 10:
+//               document.querySelector(".container").children[k].style.backgroundColor = "white";  break;
+//     }
+//  }
+//     }
+
+
+// randomColor();
+
+
+let boxes = document.querySelector(".container").children;
+
+function  getRandomColor(){
+      let val1 = Math.ceil( 0 + Math.random() * 255);
+      let val2 = Math.ceil(0 + Math.random()*255);
+      let val3 = Math.ceil(0 + Math.random()*255);
+      return `rgb( ${val1}, ${val2},${val3})`;
+}
+
+
+for(let i=0;i<5;i++){
+      boxes[i].style.backgroundColor =getRandomColor();
+}
+
+// Array.from(boxes).forEach(e=>{
+//       e.style.backgroundColor = getRandomColor();
+//       e.style.borderColor = getRandomColor();
+// })
+
+
+
+</script>
+
+</html>

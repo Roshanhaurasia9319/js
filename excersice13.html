@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic card</title>
+</head>
+<style>
+    .card {
+        display: flex;
+        border: 2px solid black;
+        width: 900px;
+        justify-content: center;
+        align-items: center;
+        padding: 12px;
+        margin: 12px 0px;
+    }
+    .image{
+        position: relative;
+    }
+    .image img{
+        width: 200px;
+    }
+    .text h1{
+        padding:2px 0;
+    }
+    .image .capsule{
+      position: absolute;
+      font-weight: bolder;
+      background-color: rgba(0, 0, 0, 0.692);
+      color: white;
+      bottom: 4px;
+      right: 5px;
+      z-index: 10;
+      border-radius: 3px;
+      padding: 3px;
+    }    
+
+</style>
+
+<body>
+    <div class="container">
+        <!-- <div class="card">
+            <div class="image">
+                <img src="hqdefault.jpg" alt="" srcset="">
+                <div class="capsule">31:10</div>
+            </div>
+            <div class="text">
+                <h1>Your First Html Website|Sigma Web Devlopment</h1>
+                <p>CodeWithHarry . 589K . 5 Months ago</p>
+                <p></p>
+            </div>
+        </div> -->
+    </div>
+</body>
+<script>
+    function createCard(title,cName,views,monthSOLD,duration,thumbnail){
+        let viewstr;
+        if(views < 1000000){
+         viewstr = views/1000+'K';
+        }
+        else if(views > 1000000){
+         viewstr = views/1000000 +'M';
+        }
+        else{
+             viewstr = views/1000 + 'K';
+        }
+        let html = `<div class="card">
+            <div class="image">
+                <img src="${thumbnail}">
+                <div class="capsule">${duration}</div>
+            </div>
+            <div class="text">
+                <h1>${title}</h1>
+                <p>${cName}. ${viewstr} views . ${monthSOLD} Months ago</p>
+                <p></p>
+            </div>
+        </div>
+    </div>`
+    document.querySelector(".container").innerHTML =document.querySelector(".container").innerHTML + html;
+    }
+    createCard("Your First Html Website|Sigma Web Devlopment","CodeWithHarry",589000,5,"31:22","hqdefault.jpg");
+    createCard("Your Second Html Website|Sigma Web Devlopment","CodeWithHarry",5890000000,5,"21:22","bg.webp");
+</script>
+
+</html>
