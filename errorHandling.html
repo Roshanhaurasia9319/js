@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error handling</title>
+</head>
+
+<body>
+    <script>
+        let a = prompt("Enter first number:");
+        let b = prompt("Enter second number:");
+
+        if (isNaN(a) || isNaN(b)) {  //if user enter other than number
+            throw SyntaxError("Sorry this is not allowed");
+        }
+
+        let sum = parseInt(a) + parseInt(b);//convert string to int
+
+        function main(){
+            try {
+            console.log(sum * x);
+            return true;
+        } catch (error) {
+            alert("Error aa gaya");
+            return false
+        }
+        finally{
+            console.log("Connection closed and DB connection closed for now");
+        }
+        }
+        
+        console.log(main());
+    </script>
+</body>
+
+</html>

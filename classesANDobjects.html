@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes and Objects</title>
+</head>
+<body>
+    <script>
+        class animal{
+            constructor(){
+                console.log("This animal class");
+            }
+            eat() {
+               console.log("khana khaunga!!"); 
+            }
+            run(){
+                console.log("Ma dodunga");
+            }
+        }
+        class lion extends animal{
+            eat(){
+                console.log("Ma maas khaunga")
+            }
+        }
+
+        let a = new animal();
+        let b= new lion();
+        console.log(a.eat());
+        console.log(b.eat(),b.run());
+    </script>
+</body>
+</html>
